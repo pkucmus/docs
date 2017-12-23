@@ -1,6 +1,8 @@
 Install a "clean" Python
 ========================
 
+You may want to install additional libraries before compiling.
+
 .. code-block:: bash
 
     sudo apt-get install -y \
@@ -10,6 +12,10 @@ Install a "clean" Python
         zlib1g-dev \
         libssl-dev \
         libjpeg-dev
+
+This will install Python in your `/opt` directory
+
+.. code-block:: bash
 
     VAR=3.6.4  # set this to the newest Python 3 installation available on python.org
     cd /tmp
@@ -21,6 +27,10 @@ Install a "clean" Python
     sudo make install
 
     sudo ln -s /opt/python/$VAR /opt/python/3.6
+
+The lines below will install `pip` and `virtualenv` with `virtualenvwrapper`
+
+.. code-block:: bash
 
     cd /tmp
     wget https://bootstrap.pypa.io/get-pip.py
