@@ -17,7 +17,7 @@ This will install Python in your `/opt` directory
 
 .. code-block:: bash
 
-    VAR=3.6.4  # set this to the newest Python 3 installation available on python.org
+    VAR=3.7.2  # set this to the newest Python 3 installation available on python.org
     cd /tmp
     wget https://www.python.org/ftp/python/$VAR/Python-$VAR.tgz
     tar -xzf Python-$VAR.tgz
@@ -26,7 +26,7 @@ This will install Python in your `/opt` directory
     make
     sudo make install
 
-    sudo ln -s /opt/python/$VAR /opt/python/3.6
+    sudo ln -s /opt/python/$VAR /opt/python/3.7
 
 The lines below will install `pip` and `virtualenv` with `virtualenvwrapper`
 
@@ -34,15 +34,15 @@ The lines below will install `pip` and `virtualenv` with `virtualenvwrapper`
 
     cd /tmp
     wget https://bootstrap.pypa.io/get-pip.py
-    sudo /opt/python/3.6/bin/python get-pip.py
+    sudo /opt/python/3.7/bin/python get-pip.py
 
-    sudo /opt/python/3.6/bin/pip install virtualenv
-    sudo /opt/python/3.6/bin/pip install virtualenvwrapper
+    sudo /opt/python/3.7/bin/pip install virtualenv
+    sudo /opt/python/3.7/bin/pip install virtualenvwrapper
 
     echo "
-    export VIRTUALENVWRAPPER_PYTHON=/opt/python/3.6/bin/python
-    export VIRTUALENVWRAPPER_VIRTUALENV=/opt/python/3.6/bin/virtualenv
+    export VIRTUALENVWRAPPER_PYTHON=/opt/python/3.7/bin/python
+    export VIRTUALENVWRAPPER_VIRTUALENV=/opt/python/3.7/bin/virtualenv
     export WORKON_HOME=~/.virtualenvs
-    . /opt/python/3.6/bin/virtualenvwrapper.sh
+    . /opt/python/3.7/bin/virtualenvwrapper.sh
     " >> ~/.bashrc
     source ~/.bashrc
